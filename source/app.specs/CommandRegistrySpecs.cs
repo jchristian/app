@@ -1,10 +1,9 @@
 ﻿ using System.Collections.Generic;
- using System.Linq;
- using Machine.Fakes;
- using Machine.Specifications;
- using app.web.core;
- using developwithpassion.specifications.rhinomocks;
- using developwithpassion.specifications.extensions;
+using System.Linq;
+using app.web.core;
+using developwithpassion.specifications.extensions;
+using developwithpassion.specifications.rhinomocks;
+using Machine.Specifications;
 
 namespace app.specs
 {  
@@ -38,10 +37,8 @@ namespace app.specs
         Because b = () =>
           result = sut.get_the_command_that_can_process(request);
 
-
-
         It should_return_the_command_to_the_caller = () =>
-          result.ShouldEqual(the_command_that_can_process)
+          result.ShouldEqual(the_command_that_can_process);
 
         static IProcessOneRequest result;
         static IProcessOneRequest the_command_that_can_process;
