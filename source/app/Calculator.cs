@@ -17,6 +17,7 @@ namespace app
     {
       ensure_all_are_positive(first, second);
       connection.Open();
+      connection.CreateCommand().ExecuteNonQuery();
       return first + second;
     }
 

@@ -42,7 +42,6 @@ namespace app.specs
       It should_run_a_query = () =>
         command.received(x => x.ExecuteNonQuery());
         
-        
       It should_return_the_sum = () =>
         result.ShouldEqual(5);
 
