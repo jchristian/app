@@ -4,21 +4,27 @@ using System.Linq;
 
 namespace app
 {
-  public class Calculator
-  {
-    public Calculator(IDbConnection  connection)
+    public class Calculator
     {
-    }
+        readonly IDbConnection connection;
 
-    public int add(int first, int second)
-    {
-      ensure_all_are_positive(first, second);
-      return first + second;
-    }
+        public Calculator(IDbConnection connection)
+        {
+            this.connection = connection;
+        }
 
-    static void ensure_all_are_positive(params int[] numbers)
-    {
-      if(numbers.Any(x => x < 0)) throw new ArgumentException();
+        public int add(int first, int second)
+        {
+            ensure_all_are_positive(first, second);
+
+            connection.Open();
+            
+            return first + second;
+        }
+
+        static void ensure_all_are_positive(params int[] numbers)
+        {
+            if (numbers.Any(x => x < 0)) throw new ArgumentException();
+        }
     }
-  }
 }
