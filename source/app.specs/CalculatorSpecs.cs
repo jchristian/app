@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Data;
-using Machine.Specifications;
-using developwithpassion.specifications.rhinomocks;
 using developwithpassion.specifications.extensions;
+using developwithpassion.specifications.rhinomocks;
+using Machine.Specifications;
 
 namespace app.specs
 {
