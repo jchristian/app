@@ -3,10 +3,10 @@ using System.Data;
 using System.Security;
 using System.Security.Principal;
 using System.Threading;
-using Machine.Specifications;
-using Rhino.Mocks;
 using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.rhinomocks;
+using Machine.Specifications;
+using Rhino.Mocks;
 
 namespace app.specs
 {
