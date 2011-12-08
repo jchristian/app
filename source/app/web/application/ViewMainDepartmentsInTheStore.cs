@@ -1,4 +1,5 @@
-﻿using app.web.core;
+﻿using app.web.application.stubs;
+using app.web.core;
 
 namespace app.web.application
 {
@@ -13,7 +14,7 @@ namespace app.web.application
       this.display_engine = display_engine;
     }
 
-    public ViewMainDepartmentsInTheStore():this(Create.a_stud_department_repository(), Create.a_stub_display_engine())
+    public ViewMainDepartmentsInTheStore():this(new StubDepartmentRepository(),new StubDisplayEngine())
     {
     }
 
