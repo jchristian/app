@@ -1,7 +1,11 @@
-﻿using Machine.Specifications;
+﻿using System.Collections.Generic;
+using app.web.application;
+using app.web.application.stubs;
 using app.web.core;
+using app.web.core.stubs;
 using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.rhinomocks;
+using Machine.Specifications;
 
 namespace app.specs
 {
@@ -48,6 +52,69 @@ namespace app.specs
 
       static IProvideDetailsForACommand request;
       static ISupportAStory application_feature;
+    }
+  }
+
+  [Subject(typeof(Create))]
+  public class CreateSpecs
+  {
+    public abstract class concern : Observes
+    {
+    }
+
+    public class when_creating_a_stub_department_repository
+    {
+      Because b = () =>
+        result = Create.a_stud_department_repository();
+
+      It should_return_a_stub_department_repository = () =>
+        result.ShouldBeOfType<StubDepartmentRepository>();
+
+      static IFindDepartments result;
+    }
+
+    public class when_creating_a_stub_display_engine
+    {
+      Because b = () =>
+        result = Create.a_stub_display_engine();
+
+      It should_return_a_stub_department_repository = () =>
+        result.ShouldBeOfType<StubDisplayEngine>();
+
+      static IDisplayReports result;
+    }
+
+    public class when_creating_a_stub_missing_command
+    {
+      Because b = () =>
+        result = Create.a_stub_missing_command();
+
+      It should_return_a_stub_department_repository = () =>
+        result.ShouldBeOfType<StubMissingCommand>();
+
+      static IProcessOneRequest result;
+    }
+
+    public class when_creating_a_stub_request
+    {
+      Because b = () =>
+        result = Create.a_stub_request_factory();
+
+      It should_return_a_stub_department_repository = () =>
+        result.ShouldBeOfType<StubRequestFactory>();
+
+      static ICreateControllerRequests result;
+    }
+
+    public class when_creating_a_stub_set_of_commands
+    {
+      Because b = () =>
+        result = Create.a_stub_set_of_commands();
+
+      It should_return_a_stub_department_repository = () =>
+        result.ShouldBeOfType<StubSetOfCommands>();
+
+      static IEnumerable<IProcessOneRequest> result;
     }
   }
 }
