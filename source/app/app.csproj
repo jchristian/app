@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="IFindARequestMatcher.cs" />
     <Compile Include="IncomingRequest.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="RequestMatchBuilder.cs" />
@@ -110,7 +111,7 @@
     <Compile Include="web\core\IProvideDetailsForACommand.cs" />
     <Compile Include="web\core\ISupportAStory.cs" />
     <Compile Include="web\core\ProcessingCommand.cs" />
-    <Compile Include="web\core\RequestMatch.cs" />
+    <Compile Include="web\core\RequestMatcher.cs" />
     <Compile Include="web\core\RequestQuery.cs" />
     <Compile Include="web\core\stubs\StubMissingCommand.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />

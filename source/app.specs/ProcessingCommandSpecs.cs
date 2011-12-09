@@ -18,7 +18,7 @@ namespace app.specs
       Establish c = () =>
       {
         request = fake.an<IProvideDetailsForACommand>();
-        depends.on<RequestMatch>(x => true);
+        depends.on<RequestMatcher>(x => true);
       };
 
       Because b = () =>

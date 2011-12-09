@@ -2,10 +2,10 @@
 {
   public class ProcessingCommand : IProcessOneRequest
   {
-    RequestMatch request_criteria;
+    RequestMatcher request_criteria;
     ISupportAStory feature;
 
-    public ProcessingCommand(RequestMatch request_criteria, ISupportAStory feature)
+    public ProcessingCommand(RequestMatcher request_criteria, ISupportAStory feature)
     {
       this.request_criteria = request_criteria;
       this.feature = feature;
