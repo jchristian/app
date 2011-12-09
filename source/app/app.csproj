@@ -78,16 +78,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="infrastructure\containers\basic\AutomaticDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyContainer.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyCreationException.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyFactoryRegistry.cs" />
+    <Compile Include="infrastructure\containers\basic\ICreateAnDependency.cs" />
     <Compile Include="infrastructure\containers\basic\ICreateASingleDependency.cs" />
     <Compile Include="infrastructure\containers\basic\ICreateDependencies.cs" />
     <Compile Include="infrastructure\containers\basic\IFindDependencyFactories.cs" />
+    <Compile Include="infrastructure\containers\basic\IMatchADependencyType.cs" />
     <Compile Include="infrastructure\containers\basic\MissingDependencyFactoryException.cs" />
+    <Compile Include="infrastructure\containers\basic\SingleDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerFacadeResolver.cs" />
     <Compile Include="infrastructure\containers\IFetchDependencies.cs" />
+    <Compile Include="infrastructure\containers\IPickTheConstructorForAType.cs" />
+    <Compile Include="infrastructure\EnumerableExtensions.cs" />
     <Compile Include="infrastructure\logging\ICreateLoggers.cs" />
     <Compile Include="infrastructure\logging\ILogInformation.cs" />
     <Compile Include="infrastructure\logging\Log.cs" />

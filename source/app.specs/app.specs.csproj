@@ -113,16 +113,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutomaticDependencyFactorySpecs.cs" />
     <Compile Include="BasicHandlerSpecs.cs" />
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="ContainerSpecs.cs" />
     <Compile Include="DependencyContainerSpecs.cs" />
     <Compile Include="DependencyFactoryRegistrySpecs.cs" />
+    <Compile Include="EnumerableExtensionsSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="LogSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="ProcessingCommandSpecs.cs" />
+    <Compile Include="SingleDependencyFactorySpecs.cs" />
     <Compile Include="StubGatewaySpecs.cs" />
     <Compile Include="utility\ObjectFactory.cs" />
     <Compile Include="ViewFactorySpecs.cs" />

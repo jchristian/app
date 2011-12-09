@@ -2,9 +2,8 @@ using System;
 
 namespace app.infrastructure.containers.basic
 {
-  public interface ICreateASingleDependency
+  public interface ICreateASingleDependency:ICreateAnDependency
   {
-    object create();
     bool can_create(Type type);
   }
 }
