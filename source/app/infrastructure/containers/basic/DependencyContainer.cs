@@ -1,4 +1,6 @@
-﻿namespace app.infrastructure.containers.basic
+﻿using System;
+
+namespace app.infrastructure.containers.basic
 {
   public class DependencyContainer :IFetchDependencies
   {
@@ -11,7 +13,17 @@
 
       public Dependency a<Dependency>()
       {
-          return (Dependency) dependency_finder.get_factory_that_can_create(typeof(Dependency)).create();
+        Dependency dependency;
+
+        try
+        {
+          dependency = (Dependency)dependency_finder.get_factory_that_can_create(typeof(Dependency)).create();
+        }
+        catch (Exception e)
+        {
+          throw new DependencyCreationException(e, typeof(Dependency));
+        }
+        return dependency;
       }
   }
 }

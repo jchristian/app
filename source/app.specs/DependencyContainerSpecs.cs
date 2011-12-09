@@ -60,10 +60,10 @@ namespace app.specs
 
         It should_throw_an_exception_with_the_correct_details = () =>
         {
-          var item = spec.exception_thrown.ShouldBeAn<DependencyCreationException>()
+          var item = spec.exception_thrown.ShouldBeAn<DependencyCreationException>();
           item.InnerException.ShouldEqual(exception);
           item.type_that_could_not_be_created.ShouldEqual(typeof(OurItem));
-        }
+        };
 
         static OurItem result;
         static object item_created_by_the_factory;
