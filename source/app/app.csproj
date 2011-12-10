@@ -91,6 +91,7 @@
     <Compile Include="infrastructure\containers\basic\SingleDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerFacadeResolver.cs" />
+    <Compile Include="infrastructure\containers\GreedyConstructorPicker.cs" />
     <Compile Include="infrastructure\containers\IFetchDependencies.cs" />
     <Compile Include="infrastructure\containers\IPickTheConstructorForAType.cs" />
     <Compile Include="infrastructure\EnumerableExtensions.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="infrastructure\logging\ILogInformation.cs" />
     <Compile Include="infrastructure\logging\Log.cs" />
     <Compile Include="infrastructure\logging\LoggerFactory.cs" />
+    <Compile Include="infrastructure\StringExtensions.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="Stub.cs" />
     <Compile Include="web\application\models\ProductItem.cs" />

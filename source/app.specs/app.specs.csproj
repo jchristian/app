@@ -122,6 +122,7 @@
     <Compile Include="DependencyFactoryRegistrySpecs.cs" />
     <Compile Include="EnumerableExtensionsSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
+    <Compile Include="GreedyConstructorPickerSpecs.cs" />
     <Compile Include="LogSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="ProcessingCommandSpecs.cs" />
