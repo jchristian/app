@@ -1,11 +1,11 @@
 ﻿using System.Data;
 using System.Reflection;
-using Machine.Specifications;
 using app.infrastructure.containers;
 using app.infrastructure.containers.basic;
 using app.specs.utility;
 using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.rhinomocks;
+using Machine.Specifications;
 
 namespace app.specs
 {
@@ -32,7 +32,7 @@ namespace app.specs
         the_greediest_ctor = ObjectFactory.expressions.to_target<OurItemWithLotsOfDependencies>()
           .get_ctor(() => new OurItemWithLotsOfDependencies(null, null, null));
 
-        constructor_selection_strategy.setup(x =>x .get_the_applicable_ctor_for(typeof(OurItemWithLotsOfDependencies)))
+        constructor_selection_strategy.setup(x => x.get_the_applicable_ctor_for(typeof(OurItemWithLotsOfDependencies)))
           .Return(the_greediest_ctor);
 
         container.setup(x => x.a(typeof(IDbConnection))).Return(the_connection);
