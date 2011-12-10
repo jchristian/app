@@ -90,4 +90,14 @@ namespace app.specs
     {
     }
   }
+
+  public class OurTypeWithMultipleConstructors
+  {
+    public OurTypeWithMultipleConstructors()
+    { }
+
+    public OurTypeWithMultipleConstructors(string first_parameter)
+    {
+    }
+  }
 }
